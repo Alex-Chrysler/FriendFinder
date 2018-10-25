@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>FriendFinder Home</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="style/style.css">
+
+</head>
+<body>
+    <!------Nav Bar------------>
+        <nav>
+                <div class="nav-wrapper z-depth-5">
+                  <a href="/home" class="brand-logo ">Friend Finder</a>
+                  <ul id="nav-mobile" class="right hide-on-med-and-down ">
+                    <li><a href="/survey">Survey</a></li>
+                    <li><a href="/api/friends">People</a></li>
+                 
+                  </ul>
+                </div>
+              </nav>
+
+<!-----------Question Area-->
+<div class="container">
+    <h2>Use the sliders to indicate wether you agree or disagree with the following statements</h2>
+
+    <div class="divider"></div>
+        <div class="section">
+           <h5>Question 1</h5>
+            <form action="#">
+            <p class="range-field">
+              <input type="range" id="q1" min="0" max="5" />
+            </p>
+          </form>
+          <p>Strongly Disagree <span class="right">Strongly Agree</span></p>
+        </div>
+  
+    <div class="divider"></div>
+        <div class="section">
+           <h5>Question 2</h5>
+            <form action="#">
+            <p class="range-field">
+              <input type="range" id="q2" min="0" max="5" />
+            </p>
+          </form>
+          <p>Strongly Disagree <span class="right">Strongly Agree</span></p>
+          </div>
+
+    <div class="divider"></div>
+        <div class="section">
+           <h5>Question 3</h5>
+            <form action="#">
+            <p class="range-field">
+              <input type="range" id="test5" min="0" max="5" />
+            </p>
+          </form>
+          <p>Strongly Disagree <span class="right">Strongly Agree</span></p>
+          </div>
+
+    <div class="divider"></div>
+        <div class="section">
+           <h5>Question 4</h5>
+            <form action="#">
+            <p class="range-field">
+              <input type="range" id="test5" min="0" max="5" />
+            </p>
+          </form>
+          <p>Strongly Disagree <span class="right">Strongly Agree</span></p>
+          </div>
+
+    <div class="divider"></div>
+        <div class="section">
+           <h5>Question 5</h5>
+            <form action="#">
+            <p class="range-field">
+              <input type="range" id="test5" min="0" max="5" />
+            </p>
+          </form>
+          <p>Strongly Disagree <span class="right">Strongly Agree</span></p>
+          </div>
+
+    <div class="divider"></div>
+        <div class="section">
+           <h5>Question 6</h5>
+            <form action="#">
+            <p class="range-field">
+              <input type="range" id="test5" min="0" max="5" />
+            </p>
+          </form>
+          <p>Strongly Disagree <span class="right">Strongly Agree</span></p>
+          </div>
+
+    <div class="divider"></div>
+        <div class="section">
+           <h5>Qusetion 7</h5>
+            <form action="#">
+            <p class="range-field">
+              <input type="range" id="test5" min="0" max="5" />
+            </p>
+          </form>
+          <p>Strongly Disagree <span class="right">Strongly Agree</span></p>
+          </div>
+
+    <div class="divider"></div>
+        <div class="section">
+           <h5>Question 8</h5>
+            <form action="Post">
+            <p class="range-field">
+              <input type="range" id="test5" min="0" max="5" />
+            </p>
+          </form>
+          <p>Strongly Disagree <span class="right">Strongly Agree</span></p>
+          </div>
+
+    <div class="divider"></div>
+        <div class="section">
+           <h5>Question 9</h5>
+            <form action="#">
+            <p class="range-field">
+              <input type="range" id="test5" min="0" max="5" />
+            </p>
+          </form>
+          <p>Strongly Disagree <span class="right">Strongly Agree</span></p>
+        </div>
+
+    <div class="divider"></div>
+        <div class="section">
+           <h5>Question 10</h5>
+            <form action="#">
+            <p class="range-field">
+              <input type="range" id="test5" min="0" max="5" />
+            </p>
+          </form>
+          <p>Strongly Disagree <span class="right">Strongly Agree</span></p>
+          </div>
+</div>
+
+
+
+<!-----------Name Box--------------------------->
+<div class="divider"></div>
+<div class="container1">
+        <div class="input-field col s12">
+          <input placeholder="Name" id="nameInput" type="text" class="validate">
+          <label for="nameInput">Enter your name</label>
+        </div>
+    </div>
+
+<!--------Image upload---------->
+<div class="divider"></div>
+<div class="row imageDiv">
+    <h4>Link us a picture of yourself</h4>
+        <form class="col s12">
+          <div class="row">
+            <div class="input-field col s12">
+              <textarea id="textarea1" class="materialize-textarea"></textarea>
+              <label for="textarea1">Image Link</label>
+            </div>
+          </div>
+        </form>
+      </div>
+
+
+
+<!------Submit Button--------------->
+
+<button class="btn-large waves-effect waves-light submitBtn" type="submit" name="action">Submit
+        <i class="material-icons right"></i>
+      </button>
+
+
+
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+</body>
+</html>
+
+<script type="text/javascript">
+
+
+
+  $(".submitBtn").on("click", function(event) {
+    event.preventDefault();
+
+    // Here we grab the form elements
+    console.log($(".range-field input"))
+
+    let $inputs = $(".range-field input")
+
+    let values = $.map($inputs, function(val, key) {return val.value
+    })
+
+    console.log(values)
+
+
+ var newFriend = {
+      answers: [values],
+      name: $("#nameInput").val(),
+      picture: $("#textarea1").val(),
+ }
+ console.log(newFriend)
+ 
+ $.post("/api/friends", newFriend)
+    .then(function(data) {
+        console.log("add.html", data);
+          alert("Adding Friend...");
+     
+
+});
+});
+
+</script>

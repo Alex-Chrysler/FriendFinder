@@ -1,0 +1,45 @@
+.card{
+width:700px;
+margin-left: 400px;
+}
+
+body{
+    background-color:#ffebee;
+}
+
+.agree{
+    display: flex;
+}
+
+.container{
+    background-color: #ef9a9a;
+    padding: 30px;
+}
+
+.imageDiv{
+    width:90%;
+    outline: 5px dotted;
+    outline-color: #e57373
+}
+
+.submitBtn{
+width: 300px;
+margin-left: 650px;
+}
+
+@font-face {
+    font-family: hipster;
+    src: url(../fonts/Sweet\ Hipster.ttf);
+}
+
+.brand-logo{
+    font-family: hipster;
+    height: 100px;
+}
+
+.container1{
+    width:90%;
+    outline: 5px dotted;
+    outline-color: #e57373;
+    padding: 20px
+}
