@@ -36,8 +36,7 @@ module.exports = function(app) {
         var newFriend = req.body
        
 
-        var matchName ="";
-        var matchxImage = "";
+
         var totalDifference = 1000;
 
         for(let i in friendsData){
