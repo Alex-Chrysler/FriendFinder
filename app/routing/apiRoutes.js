@@ -61,7 +61,7 @@ module.exports = function(app) {
       console.log(diff)
       console.log(totalDifference)
 
-        diff = totalDifference
+        totalDifference = diff
         console.log(diff)
 
       var dataToSend = {name:friendsData[i].name, image: friendsData[i].picture} ;
