@@ -34,7 +34,7 @@ module.exports = function(app) {
 
    app.post("/api/friends", function(req, res) {
         var newFriend = req.body
-        var userResponses = newFriend.answers;
+       
 
         var matchName ="";
         var matchxImage = "";
@@ -46,8 +46,8 @@ module.exports = function(app) {
 
 
             var diff = 0
-            for (let j in userResponses){
-                 diff += Math.abs(parseInt(friendsData[i].answers[j]) - parseInt(userResponses[j]));
+            for (let j in friendsData[i].scores){
+                 diff += Math.abs(parseInt(friendsData[i].answers[j]) - parseInt(req.body.answers[j]));
 
                     /*console.log("other thing" + friendsData[i].answers[j])
                     console.log("user response" + userResponses)
@@ -58,8 +58,11 @@ module.exports = function(app) {
       /*console.log('Closest match found = ' + diff);
       console.log('Friend name = ' + friendsData[i].name);
       console.log('Friend image = ' + friendsData[i].picture);*/
-      
+      console.log(diff)
+      console.log(totalDifference)
+
         diff = totalDifference
+        console.log(diff)
 
       var dataToSend = {name:friendsData[i].name, image: friendsData[i].picture} ;
     
