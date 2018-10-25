@@ -9,7 +9,7 @@ module.exports = function(app) {
         return res.json(friendsData);
     });
 
-app.post("/api/firends", function(req, res) {
+/*app.post("/api/firends", function(req, res) {
 
     var user = req.body;
 
@@ -23,48 +23,55 @@ app.post("/api/firends", function(req, res) {
     for (var i = 0; i < friendsData.length; i++) {
         var totalDifference = 0;
         for(var j = 0; j < friendsData[i].answers.length; j++){
-            var difference = Math.abs(user.answers[j] - friendsData[i].answers[j])
+            var difference = Math.abs(user.answers[j] - friendsData[i].answers[j]);
+            totalDifference += difference;
         }
+        if(totalDifference < minimumDifference) {
+            bestFriendIndex = i;
+            minimumDifference = totalDifference;
     }
-})
+})*/
 
-   /* app.post("/api/friends", function(req, res) {
+   app.post("/api/friends", function(req, res) {
         var newFriend = req.body
         var userResponses = newFriend.answers;
 
         var matchName ="";
-        var matchImage = "";
+        var matchxImage = "";
         var totalDifference = 1000;
 
-        for(i in friendsData){
+        for(let i in friendsData){
 
            // console.log('friend = ' + JSON.stringify(friendsData[i]));
 
 
             var diff = 0
-            for (var j in userResponses){
+            for (let j in userResponses){
                  diff += Math.abs(parseInt(friendsData[i].answers[j]) - parseInt(userResponses[j]));
 
-                    console.log("other thing" + friendsData[i].answers[j])
+                    /*console.log("other thing" + friendsData[i].answers[j])
                     console.log("user response" + userResponses)
-                     console.log('diff = ' + diff)
+                     console.log('diff = ' + diff)*/
         }
   
         if (diff < totalDifference) {
-      console.log('Closest match found = ' + diff);
+      /*console.log('Closest match found = ' + diff);
       console.log('Friend name = ' + friendsData[i].name);
-      console.log('Friend image = ' + friendsData[i].photo);
+      console.log('Friend image = ' + friendsData[i].picture);*/
       
-      newFriend.totalDifference = diff;
+        diff = totalDifference
 
-      matchName = friendsData[i].name;
-      matchImage = friendsData[i].photo;
+      var dataToSend = {name:friendsData[i].name, image: friendsData[i].picture} ;
+    
+
+      console.log(dataToSend)
+    
 }
 }
-*/
+
 //console.log(newFriend)
 friendsData.push(newFriend);
-res.json(true);  
+res.send(dataToSend)
 
     })
 
