@@ -1,6 +1,7 @@
 .card{
-width:700px;
-margin-left: 400px;
+
+margin-left: auto;
+margin-right:auto;
 }
 
 body{
@@ -27,7 +28,8 @@ body{
 
 .submitBtn{
 width: 300px;
-margin-left: 650px;
+margin-left: auto;
+margin-right:auto;
 }
 
 @font-face {
@@ -50,11 +52,12 @@ margin-left: 650px;
     margin-right:auto;
 }
 
-#bestFriendPhoto{
-    height: 300px;
-    width:400px;
-}
+
 
 #directions{
     text-align: center;
+}
+
+.card-title{
+    color: red
 }
