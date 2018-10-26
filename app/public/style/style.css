@@ -19,7 +19,10 @@ body{
 .imageDiv{
     width:90%;
     outline: 5px dotted;
-    outline-color: #e57373
+    outline-color: #e57373;
+    padding:20px;
+    margin-top: 20px;
+
 }
 
 .submitBtn{
@@ -41,5 +44,17 @@ margin-left: 650px;
     width:90%;
     outline: 5px dotted;
     outline-color: #e57373;
-    padding: 20px
+    padding: 20px;
+    margin-top: 20px;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+#bestFriendPhoto{
+    height: 300px;
+    width:400px;
+}
+
+#directions{
+    text-align: center;
 }
