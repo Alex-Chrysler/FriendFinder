@@ -35,8 +35,6 @@ module.exports = function(app) {
    app.post("/api/friends", function(req, res) {
         var newFriend = req.body
        
-
-
         var totalDifference = 1000;
 
         for(let i in friendsData){
